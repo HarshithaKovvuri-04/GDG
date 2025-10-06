@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zoom Meeting Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-96">
+        <h1 class="text-2xl font-bold mb-4 text-center">Zoom Meeting Generator</h1>
+        <div class="space-y-4">
+            <input 
+                type="text" 
+                id="meetingTopic" 
+                placeholder="Meeting Topic" 
+                class="w-full p-2 border rounded"
+            >
+            <button 
+                onclick="generateMeeting()"
+                class="w-full bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+            >
+                Generate Meeting
+            </button>
+            <div 
+                id="meetingResult" 
+                class="mt-4 text-center"
+            ></div>
+        </div>
+    </div>
+
+    <script>
+    async function generateMeeting() {
+        const topic = document.getElementById('meetingTopic').value;
+        const resultDiv = document.getElementById('meetingResult');
+        
+        try {
+            const response = await fetch('/generate-meeting', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ topic: topic })
+            });
+
+            const data = await response.json();
+            
+            if (data.join_url) {
+                resultDiv.innerHTML = `
+                    <p class="text-green-600">Meeting Created!</p>
+                    <a href="${data.join_url}" target="_blank" class="text-blue-500 underline">
+                        Join Meeting
+                    </a>
+                    <p>Meeting ID: ${data.id}</p>
+                `;
+            } else {
+                resultDiv.innerHTML = `
+                    <p class="text-red-600">Failed to create meeting</p>
+                `;
+            }
+        } catch (error) {
+            resultDiv.innerHTML = `
+                <p class="text-red-600">Error: ${error.message}</p>
+            `;
+        }
+    }
+    </script>
+</body>
+</html>
