@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccination Alerts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: #6ce0bf;
+            padding: 20px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        .alert-container {
+            margin: 20px;
+        }
+
+        .alert {
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .alert.unavailable {
+            background-color: #f8d7da;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+
+        button:hover {
+            background-color: #e04e2e;
+        }
+
+        footer {
+            background-color: #6ce0bf;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vaccination Alerts</h1>
+        <p>Stay updated with the latest vaccination information</p>
+    </header>
+
+    <section class="alert-container">
+        <div class="alert">
+            <h3>COVID-19 Vaccination Available</h3>
+            <p>Get vaccinated at your nearest center. Please follow the guidelines and register.</p>
+            <button onclick="showAlert()">Set Reminder</button>
+        </div>
+        <div class="alert">
+            <h3>Flu Vaccine Registration</h3>
+            <p>The seasonal flu vaccine is now available. Click below for more details.</p>
+            <button onclick="showAlert()">Set Reminder</button>
+        </div>
+        <div class="alert">
+            <h3>Pneumococcal Vaccine</h3>
+            <p>Pneumococcal vaccination is recommended for individuals over 65 and those with chronic conditions. Check with your healthcare provider.</p>
+            <button onclick="showAlert()">Set Reminder</button>
+        </div>
+        <div class="alert">
+            <h3>Hepatitis B Vaccination</h3>
+            <p>Protect yourself from Hepatitis B with the vaccination. Available at hospitals and clinics nearby.</p>
+            <button onclick="showAlert()">Set Reminder</button>
+        </div>
+        <div class="alert">
+            <h3>HPV (Human Papillomavirus) Vaccine</h3>
+            <p>The HPV vaccine helps protect against cervical and other cancers. Available for both men and women.</p>
+            <button onclick="showAlert()">Set Reminder</button>
+        </div>
+        <div class="alert">
+            <h3>Tetanus, Diphtheria, and Pertussis (Tdap) Vaccine</h3>
+            <p>Ensure your Tdap vaccination is up to date. Recommended for adults every 10 years.</p>
+            <button onclick="showAlert()">Set Reminder</button>
+        </div>
+
+        <!-- Unavailable Vaccines Section -->
+        <h2>Vaccines Not Currently Available</h2>
+        <div class="alert unavailable">
+            <h3>Malaria Vaccine</h3>
+            <p>The Malaria vaccine is under research and not widely available at the moment. Stay tuned for updates.</p>
+        </div>
+        <div class="alert unavailable">
+            <h3>HIV Vaccine</h3>
+            <p>Currently, there is no approved HIV vaccine. Research is ongoing, but it is not yet available for public use.</p>
+        </div>
+        <div class="alert unavailable">
+            <h3>Herpes Vaccine</h3>
+            <p>There is no approved vaccine for herpes yet. Clinical trials are underway, but availability is uncertain.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vaccination Alerts - All Rights Reserved</p>
+    </footer>
+
+    <script>
+        function showAlert() {
+            alert("Reminder set! You'll be notified about vaccination updates.");
+        }
+    </script>
+</body>
+</html>

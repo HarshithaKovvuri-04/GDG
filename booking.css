@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.doctor-list {
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.doctor-card {
+    background: #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    flex: 1 1 calc(45% - 20px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.doctor-card h2 {
+    margin: 0 0 10px;
+}
+
+.doctor-card p {
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+a{
+    color:white;
+    text-decoration: none;
+}

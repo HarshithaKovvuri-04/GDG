@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors List</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Available Doctors</h1>
+        <div class="doctor-list">
+            <div class="doctor-card">
+                <h2>Dr. John Smith</h2>
+                <p><strong>Specialization:</strong> General Practitioner</p>
+                <p><strong>Experience:</strong> 10 years</p>
+                <p><strong>Location:</strong> Downtown Clinic</p>
+                <button onclick="bookAppointment('Dr. John Smith')"><a href="bookingappointment.html">Book Appointment</a></button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. Emily Johnson</h2>
+                <p><strong>Specialization:</strong> Pediatrician</p>
+                <p><strong>Experience:</strong> 8 years</p>
+                <p><strong>Location:</strong> Children's Hospital</p>
+                <button onclick="bookAppointment('Dr. Emily Johnson')"><a href="bookingappointment.html">Book Appointment</a></button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. Michael Brown</h2>
+                <p><strong>Specialization:</strong> Cardiologist</p>
+                <p><strong>Experience:</strong> 15 years</p>
+                <p><strong>Location:</strong> Heart Care Center</p>
+                <button onclick="bookAppointment('Dr. Michael Brown')"><a href="bookingappointment.html">Book Appointment</a></button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. Sarah Davis</h2>
+                <p><strong>Specialization:</strong> Dermatologist</p>
+                <p><strong>Experience:</strong> 5 years</p>
+                <p><strong>Location:</strong> Skin Health Clinic</p>
+                <button onclick="bookAppointment('Dr. Sarah Davis')"><a href="bookingappointment.html">Book Appointment</a></button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. David Wilson</h2>
+                <p><strong>Specialization:</strong> Orthopedic Surgeon</p>
+                <p><strong>Experience:</strong> 12 years</p>
+                <p><strong>Location:</strong> Bone & Joint Institute</p>
+                <button onclick="bookAppointment('Dr. David Wilson')"><a href="bookingappointment.html">Book Appointment</a></button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. Lisa Taylor</h2>
+                <p><strong>Specialization:</strong> Gynecologist</p>
+                <p><strong>Experience:</strong> 7 years</p>
+                <p><strong>Location:</strong> Women's Health Center</p>
+                <button onclick="bookAppointment('Dr. Lisa Taylor')"><a href="bookingappointment.html">Book Appointment</a></button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. James Anderson</h2>
+                <p><strong>Specialization:</strong> Neurologist</p>
+                <p><strong>Experience:</strong> 14 years</p>
+                <p><strong>Location:</strong> Brain Health Clinic</p>
+                <button onclick="bookAppointment('Dr. James Anderson')"><a href="bookingappointment.html">Book Appointment</a></button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. Patricia Martinez</h2>
+                <p><strong>Specialization:</strong> Endocrinologist</p>
+                <p><strong>Experience:</strong> 9 years</p>
+                <p><strong>Location:</strong> Hormone Health Center</p>
+                <button onclick="bookAppointment('Dr. Patricia Martinez')"><a href="bookingappointment.html">Book Appointment</a></button>
+            </div>
+            <div class="doctor-card">
+                <h2>Dr. Robert Garcia</h2>
+                <p><strong>Specialization:</strong> Gastroenterologist</p>
+                <p><strong>Experience:</strong> 11 years</p>
+                <p><strong>Location:</strong> Digestive Health Clinic</p>
+                <button onclick="bookAppointment('Dr. Robert Garcia')"><a href="bookingappointment.html">Book Appointment</a></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function bookAppointment(doctorName) {
+            alert("You have selected to book an appointment with " + doctorName);
+            // Here you can redirect to the appointment booking form or handle the booking logic
+        }
+    </script>
+</body>
+</html>
